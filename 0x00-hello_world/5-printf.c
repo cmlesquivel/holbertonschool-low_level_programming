@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 /**
- *main -entry point
+ * main - Entry point
  *
- *return :Always 0 (success)
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 char str[80] = "with proper grammar, but the outcome is a piece of art,";
