@@ -9,15 +9,15 @@
 
 int main(void)
 {
-int i;
+int i,x;
 char abecedario[26] = "abcdefghijklmnopqrstuvwxyz";
 for (i = 0; i < 26; i++)
 {
 putchar(abecedario[i]);
 }
-for (i = 0; i < 26; i++)
+for (x = 0; x < 26; x++)
 {
-putchar(toupper(abecedario[i]));
+putchar(toupper(abecedario[x]));
 }
 
 putchar('\n');
