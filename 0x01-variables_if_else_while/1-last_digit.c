@@ -11,15 +11,11 @@
 
 int main(void)
 {
-int n, residuo, absoluto;
+int n, residuo;
 
 srand(time(0));
 n = rand() - RAND_MAX / 2;
 residuo = n % 10;
-
-
-
-
 
 if (residuo > 5)
 {
