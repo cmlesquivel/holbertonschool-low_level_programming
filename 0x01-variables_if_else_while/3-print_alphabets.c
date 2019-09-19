@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <ctype.h>
 
 /**
  * main - Entry point
@@ -10,16 +9,14 @@
 int main(void)
 {
 int i, x;
-char abecedario[26] = "abcdefghijklmnopqrstuvwxyz";
-for (i = 0; i < 26; i++)
+for (i = 97; i < 123; i++)
 {
-putchar(abecedario[i]);
+putchar(i);
 }
-for (x = 0; x < 26; x++)
+for (x = 65; x < 91; x++)
 {
-putchar(toupper(abecedario[x]));
+putchar(x);
 }
-
 putchar('\n');
 return (0);
 }
