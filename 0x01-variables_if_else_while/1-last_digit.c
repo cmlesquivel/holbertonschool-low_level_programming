@@ -17,28 +17,21 @@ srand(time(0));
 n = rand() - RAND_MAX / 2;
 residuo = n % 10;
 
-if (residuo >= 0)
-{
-absoluto = residuo;
-}
-else
-{
-absoluto = -residuo;
-}
 
 
 
-if (absoluto > 5)
+
+if (residuo > 5)
 {
 printf("Last digit of %d is %d and is greater than 5\n", n, residuo);
 }
-else if (absoluto < 6 && absoluto != 0)
+else if (residuo == 0)
 {
-printf("Last digit of %d is %d and is less than 6 and not 0\n", n, residuo);
+printf("Last digit of %d is %d and is 0\n", n, residuo);
 }
 else
 {
-printf("Last digit of %d is %d and is 0\n", n, residuo);
+printf("Last digit of %d is %d and is less than 6 and not 0\n", n, residuo);
 }
 
 return (0);
