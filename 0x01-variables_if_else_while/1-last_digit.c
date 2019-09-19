@@ -32,7 +32,7 @@ if (absoluto > 5)
 {
 printf("Last digit of %d is %d and is greater than 5\n", n, residuo);
 }
-else if (absoluto < 6 && absoluto > 0)
+else if (absoluto < 6 && absoluto != 0)
 {
 printf("Last digit of %d is %d and is less than 6 and not 0\n", n, residuo);
 }
