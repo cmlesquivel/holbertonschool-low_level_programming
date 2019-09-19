@@ -9,7 +9,7 @@
 
 int main(void)
 {
-int i,x;
+int i, x;
 char abecedario[26] = "abcdefghijklmnopqrstuvwxyz";
 for (i = 0; i < 26; i++)
 {
