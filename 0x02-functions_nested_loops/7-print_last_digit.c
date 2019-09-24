@@ -9,15 +9,19 @@
 int print_last_digit(int c)
 {
 int numberAbsolt, lastNumber;
-if (c > 0)
+
+lastNumber = c % 10;
+
+
+if (lastNumber > 0)
 {
-numberAbsolt = c;
+numberAbsolt = lastNumber;
 }
 else
 {
-numberAbsolt = -c;
+numberAbsolt = -lastNumber;
 }
-lastNumber = numberAbsolt % 10;
-_putchar(lastNumber + '0');
-return (lastNumber);
+
+_putchar(numberAbsolt + '0');
+return (numberAbsolt);
 }
