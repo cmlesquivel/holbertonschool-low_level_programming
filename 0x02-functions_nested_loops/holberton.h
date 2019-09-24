@@ -39,8 +39,8 @@ int _abs(int c);
 #endif
 
 
-#ifndef ABS_FILE
-#define ABS_FILE
+#ifndef PRINT_LAST_DIGIT_FILE
+#define PRINT_LAST_DIGIT_FILE
 int print_last_digit(int c);
 #endif
 
