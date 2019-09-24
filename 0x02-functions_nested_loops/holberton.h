@@ -8,3 +8,9 @@ int _putchar(char c);
 #define PRINT_ALPHABET_FILE
 void print_alphabet(void);
 #endif
+
+
+#ifndef PRINT_ALPHABETX10_FILE
+#define PRINT_ALPHABETX10_FILE
+void print_alphabetx10(void);
+#endif
