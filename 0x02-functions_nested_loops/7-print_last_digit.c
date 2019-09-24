@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
 * print_last_digit - printer the last number
 * @c: the number to check
