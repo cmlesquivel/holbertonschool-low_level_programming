@@ -19,3 +19,9 @@ void print_alphabet_x10(void);
 #define IS_LOWER_FILE
 int _islower(int c);
 #endif
+
+
+#ifndef IS_LETTER_FILE
+#define IS_LETTER_FILE
+int _isalpha(int c);
+#endif
