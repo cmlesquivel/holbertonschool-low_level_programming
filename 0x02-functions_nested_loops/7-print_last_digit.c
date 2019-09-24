@@ -7,8 +7,16 @@
 
 int print_last_digit(int c)
 {
-int numberAbsolt = _abs(c);
-int lastNumber = numberAbsolt % 10;
+int numberAbsolt, lastNumber;
+if (c > 0)
+{
+numberAbsolt = c;
+}
+else
+{
+numberAbsolt = -c;
+}
+lastNumber = numberAbsolt % 10;
 _putchar(lastNumber + '0');
 return (lastNumber);
 }
