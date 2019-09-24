@@ -36,6 +36,11 @@ int print_sign(int c);
 #ifndef ABS_FILE
 #define ABS_FILE
 int _abs(int c);
+#endif
+
+
+#ifndef ABS_FILE
+#define ABS_FILE
 int print_last_digit(int c);
 #endif
 
