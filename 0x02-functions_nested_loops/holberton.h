@@ -12,5 +12,5 @@ void print_alphabet(void);
 
 #ifndef PRINT_ALPHABETX10_FILE
 #define PRINT_ALPHABETX10_FILE
-void print_alphabetx10(void);
+void print_alphabet_x10(void);
 #endif
