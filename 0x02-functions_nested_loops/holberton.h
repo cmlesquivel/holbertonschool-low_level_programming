@@ -25,3 +25,9 @@ int _islower(int c);
 #define IS_LETTER_FILE
 int _isalpha(int c);
 #endif
+
+
+#ifndef PRINT_SIGN_FILE
+#define PRINT_SIGN_FILE
+int print_sign(int c);
+#endif
