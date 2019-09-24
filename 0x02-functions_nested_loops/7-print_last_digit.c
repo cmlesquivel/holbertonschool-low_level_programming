@@ -8,8 +8,8 @@
 
 int print_last_digit(int c)
 {
-int numberAbsolt=0;
-int lastNumber=0;
+int numberAbsolt = 0;
+int lastNumber = 0;
 
 lastNumber = c % 10;
 
