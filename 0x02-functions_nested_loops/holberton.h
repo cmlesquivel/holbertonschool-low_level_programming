@@ -31,3 +31,9 @@ int _isalpha(int c);
 #define PRINT_SIGN_FILE
 int print_sign(int c);
 #endif
+
+
+#ifndef ABS_FILE
+#define ABS_FILE
+int _abs(int c);
+#endif
