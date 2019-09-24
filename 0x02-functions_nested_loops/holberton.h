@@ -50,6 +50,10 @@ int print_last_digit(int c);
 void jack_bauer(void);
 #endif
 
+#ifndef PRINT_NINE_TABLE_FILE
+#define PRINT_NINE_TABLE_FILE
+void times_table(void);
+#endif
 
 
 
