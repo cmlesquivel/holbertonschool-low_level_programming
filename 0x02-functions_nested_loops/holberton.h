@@ -14,3 +14,8 @@ void print_alphabet(void);
 #define PRINT_ALPHABETX10_FILE
 void print_alphabet_x10(void);
 #endif
+
+#ifndef IS_LOWER_FILE
+#define IS_LOWER_FILE
+int _islower(int c);
+#endif
