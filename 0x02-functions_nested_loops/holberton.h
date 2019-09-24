@@ -45,3 +45,11 @@ int print_last_digit(int c);
 #endif
 
 
+#ifndef JACK_TIME_FILE
+#define JACK_TIME_FILE
+void jack_bauer(void);
+#endif
+
+
+
+
