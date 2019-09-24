@@ -55,5 +55,9 @@ void jack_bauer(void);
 void times_table(void);
 #endif
 
+#ifndef ADD_FILE
+#define ADD_FILE
+int add(int a, int b);
+#endif
 
 
