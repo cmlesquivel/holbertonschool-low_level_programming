@@ -1,15 +1,32 @@
-#include "holberton.h"
+#include "stdio.h"
 
 /**
-* add - return the add the two numbers
-* @a: the number one to add
-* @b:the number two to add
+* print_to_98 - print a serie of numbers to 98
+* @n: the number limit
+*
 * Return: return the add the two numbers
 **/
 
-int add(int a, int b)
+void print_to_98(int n)
 {
-int add;
-add = a + b;
-return (add);
+	int a;
+
+	if (n > 98)
+	{
+		for (a = n; a >= 98; a--)
+		{
+			printf("%d\n", a);
+		}
+	}
+	else if (n == 98)
+	{
+		printf("98\n");
+	}
+	else
+	{
+		for (a = n; a <= 98; a++)
+		{
+			printf("%d\n", a);
+		}
+	}
 }
