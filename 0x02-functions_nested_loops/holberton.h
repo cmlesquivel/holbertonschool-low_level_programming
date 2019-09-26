@@ -64,3 +64,9 @@ int add(int a, int b);
 #define PRINT_98_FILE
 void print_to_98(int n);
 #endif
+
+
+#ifndef PRINT_TABLES_TIMES_FILE
+#define PRINT_TABLES_TIMES_FILE
+void print_times_table(int n);
+#endif
