@@ -1,6 +1,3 @@
-#include "holberton.h"
-
-
 /**
  * _isupper - return is the charaacter is mayus
  * @n: chararter to check
