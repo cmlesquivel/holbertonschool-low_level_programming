@@ -12,6 +12,6 @@ void print_line(int n);
 void print_diagonal(int n);
 void print_square(int x);
 void test_Fizz_Buzz(void);
-void print_triangule(int size);
+void print_triangle(int size);
 
 #endif /* HOLBERTON_H */
