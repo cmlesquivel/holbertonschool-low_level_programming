@@ -1,6 +1,5 @@
 #include "holberton.h"
 
-
 /**
  * print_diagonal - draws a diagonal line
  * @n: number of times to draws a diagonal line
