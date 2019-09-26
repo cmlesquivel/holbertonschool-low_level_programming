@@ -12,8 +12,7 @@ void print_negative(int n);
 
 void print_to_98(int n)
 {
-        int a, b, c, d, e;
-
+       
         if (n > 98)
         {
             print_positive(n);
