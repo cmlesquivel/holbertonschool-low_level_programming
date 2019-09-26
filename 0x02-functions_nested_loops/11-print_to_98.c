@@ -1,4 +1,4 @@
-#include "stdio.h"x
+#include "stdio.h"
 #include "holberton.h"
 void print_positive(int n);
 
@@ -72,6 +72,9 @@ void print_to_98(int n)
 }
 
 void print_positive(int n){
+
+	int a,b,c,d,e;
+	
                     for (a = n; a >= 98; a--)
                     {
                     if (a > 99)
