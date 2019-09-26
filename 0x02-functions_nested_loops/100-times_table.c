@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-* times_table - printer times  table
+* print_times_table - printer times  table
 * @n: times to printer table
 * Return: printer times table
 **/
