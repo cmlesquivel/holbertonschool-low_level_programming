@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * test_Fizz_Buzz - print the test Fizz Buzz
+ * main - print the test Fizz Buzz
  *
- * Return: void
+ * Return: 1 if the program is ok
  */
 
-void test_Fizz_Buzz(void)
+int main(void)
 {
 	int a;
 
@@ -34,4 +34,5 @@ void test_Fizz_Buzz(void)
 		}
 	}
 	printf("\n");
+	return (0);
 }
