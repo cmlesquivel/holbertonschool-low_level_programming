@@ -1,4 +1,3 @@
-#include "stdio.h"
 #include "holberton.h"
 void print_positive(int n);
 void print_negative(int n);
@@ -7,7 +6,7 @@ void print_negative(int n);
 * print_to_98 - print a serie of numbers to 98
 * @n: the number limit
 *
-* Return: return the add the two numbers
+* Return: void
 **/
 
 void print_to_98(int n)
@@ -25,6 +24,13 @@ else
 print_negative(n);
 }
 }
+
+/**
+* print_positive - print a serie of numbers to 98
+* @n: the number limit
+*
+* Return: void
+**/
 
 void print_positive(int n)
 {
@@ -62,6 +68,13 @@ _putchar('\n');
 }
 }
 }
+
+/**
+* print_negative - print a serie of numbers to 98
+* @n: the number limit
+*
+* Return: void
+**/
 
 void print_negative(int n)
 {
