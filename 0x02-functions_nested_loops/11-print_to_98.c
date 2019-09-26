@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 void print_positive(int n);
 void print_negative(int n);
 
