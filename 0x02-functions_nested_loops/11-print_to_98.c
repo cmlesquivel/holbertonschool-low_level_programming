@@ -86,9 +86,17 @@ else
 {
 b = -a / 10;
 c = -a % 10;
-_putchar('-');
+if (a < 9)
+{
+ _putchar('-');
 _putchar(b + '0');
 _putchar(c + '0');
+}
+else
+{
+_putchar('-');
+_putchar(c + '0');
+}
 }
 }
 else
