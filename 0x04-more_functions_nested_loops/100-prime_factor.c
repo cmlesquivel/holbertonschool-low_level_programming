@@ -28,5 +28,6 @@ larges_prime = a;
 
 printf("%li", larges_prime);
 printf("\n");
+return(0);
 
 }
