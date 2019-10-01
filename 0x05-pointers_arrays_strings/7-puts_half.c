@@ -22,7 +22,7 @@ void puts_half(char *s)
 	}
 	else
 	{
-		star = (lengt - 1) / 2;
+		star = ((lengt - 1) / 2) + 1;
 	}
 	for (i = star; i < lengt; i++)
 	{
