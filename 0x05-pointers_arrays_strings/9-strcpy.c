@@ -7,13 +7,9 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	int i = 0;
 	int x;
 
-	while (src[i] != '\n')
-		i++;
-
-	for (x = 0; x < i; x++)
+	for (x = 0; src[x] != '\n'; x++)
 	{
 		dest[x] = src[x];
 	}
