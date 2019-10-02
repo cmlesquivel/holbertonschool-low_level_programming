@@ -1,5 +1,5 @@
 /**
-* _strcpy - copy the string src to dest
+* _strcpy - copy the string src to string dest
 * @src: string source
 * @dest: string dest
 * Return: the string dest
@@ -13,9 +13,10 @@ char *_strcpy(char *dest, char *src)
 	while (src[i] != '\n')
 		i++;
 
-	for (x = 0; x <= i; x++)
+	for (x = 0; x < i; x++)
 	{
 		dest[x] = src[x];
 	}
+	dest[x] = src[x];
 	return (dest);
 }
