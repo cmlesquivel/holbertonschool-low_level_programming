@@ -8,7 +8,7 @@ int _atoi(char *myarray)
 {
 
 int i;
-int number = 0;
+unsigned int number = 0;
 int minus = 0;
 
 
