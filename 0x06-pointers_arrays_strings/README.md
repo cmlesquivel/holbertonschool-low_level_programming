@@ -1,0 +1,1 @@
+reply to topic pointers, arrays ans string
