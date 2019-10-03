@@ -1,5 +1,5 @@
 /**
- * _strcat: copy the string src to string dest
+ * _strcat - copy the string src to string dest
  *@dest: string dest
  *@src:string source
  *Return: string dest with src
