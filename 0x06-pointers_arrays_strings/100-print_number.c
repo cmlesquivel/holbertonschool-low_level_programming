@@ -1,44 +1,35 @@
 #include "holberton.h"
 
-void print_number(int number_to_printf)
-{
-unsigned int firstNumber, number;
-int n = 0;
-int x = 0;
-int dividir = 1;
-int digito;
+/**
+ * print_number - print a number int
+ * @number:number to print
+ * Return: 0
+ **/
 
-if(number_to_printf < 0)
+void print_number(int number)
 {
-firstNumber = -number_to_printf;
-number = -number_to_printf;
+int divisor = 10;
+int residuo;
+int n = 1;
+int digito;
+if (number < 0)
+{
+number = -number;
 _putchar('-');
 }
-else
+residuo = number % divisor;
+while ((number - residuo) != 0)
 {
-firstNumber = number_to_printf;
-number = number_to_printf;
-}
-
-while((number / 10) > 0)
-{
-number = number / 10;
+divisor = divisor * 10;
+residuo = number % divisor;
 n++;
 }
-
-for(x = 0; x < n; x++)
+while (n > 0)
 {
-dividir = dividir * 10;
-}
-
-while((firstNumber / dividir > 0))
-{
-digito = firstNumber / dividir;
+divisor = divisor / 10;
+digito = number / divisor;
+number = number - (digito *divisor);
 _putchar(digito + '0');
-firstNumber = firstNumber - digito * dividir;
-if(dividir != 1)
-{
-dividir = dividir / 10;
-}
+n--;
 }
 }
