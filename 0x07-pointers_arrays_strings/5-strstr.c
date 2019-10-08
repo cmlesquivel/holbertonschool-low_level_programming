@@ -14,7 +14,6 @@ char *_strstr(char *s, char *accept)
 {
 	int i, j;
 	int posicion = 0;
-	int match = 0;
 
 	for (i = 0; accept[i] != '\0'; i++)
 	{
