@@ -10,7 +10,9 @@
 * if the substring is not found
 **/
 
+
 char *_strstr(char *s, char *accept)
+
 {
 	int i, j;
 	int posicion = 0;
@@ -19,21 +21,24 @@ char *_strstr(char *s, char *accept)
 	{
 		for (j = 0; s[j] != '\0'; j++)
 		{
-			if (accept[i] == s[j])
+			if (accept[i] == s[j] && accept[i] != '\0')
 			{
 				if (posicion == 0)
 				{
-				posicion = j;
+					posicion = j;
 				}
-				break;
+				i++;
+				if (accept[i] == '\0')
+				{
+					return (s + posicion);
+				}
 			}
-
-			if (posicion != 0 && accept[i] != s[j])
+			else
 			{
-				return (s + posicion);
+				posicion = 0;
+				i = 0;
 			}
-
 		}
 	}
-		return (NULL);
+	return (NULL);
 }
