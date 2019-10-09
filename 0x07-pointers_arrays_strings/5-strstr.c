@@ -35,6 +35,7 @@ char *_strstr(char *s, char *accept)
 			}
 			else
 			{
+				j= posicion;
 				posicion = 0;
 				i = 0;
 			}
