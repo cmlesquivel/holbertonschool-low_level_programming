@@ -28,7 +28,7 @@ char *_strstr(char *s, char *accept)
 					posicion = i;
 				}
 				i++;
-				if (accept[j] == '\0')
+				if (accept[j+1] == '\0')
 				{
 					return (s + posicion);
 				}
