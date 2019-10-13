@@ -20,7 +20,6 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			printf("escribiendo %s", argv[i]);
 			printf("Error\n");
 			return (1);
 		}
