@@ -14,7 +14,7 @@ int **alloc_grid(int columns, int rows)
 	int i, j;
 	int **array;
 
-	if (columns < 1 || rows < 1)
+	if (columns <= 0 || rows <= 0)
 		return (NULL);
 
 	array = malloc(rows * sizeof(int *));
