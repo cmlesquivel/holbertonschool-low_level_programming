@@ -29,7 +29,7 @@ int _strlen(char *s)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *str;
+	char *str = NULL;
 	unsigned int size_s1 = 0;
 	unsigned int size_s2 = 0;
 	unsigned int i;
