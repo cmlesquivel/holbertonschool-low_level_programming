@@ -27,7 +27,7 @@ void *argstostr(int ac, char **av)
 		}
 		counter++;
 	}
-	srt = malloc(sizeof(char) * counter);
+	srt = malloc(sizeof(char) * (counter + 1));
 
 	if (srt == NULL)
 	{
