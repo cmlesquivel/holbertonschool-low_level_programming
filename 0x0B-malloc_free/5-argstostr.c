@@ -2,46 +2,50 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid -  create a pointer to a 2 dimensional array of integers
- * @columns: numbers of columns
- * @rows: number of rows
+ * argstostr -  concatenates all the arguments of your program
+ * @ac: size of av
+ * @av: array that contains the command line arguments
  *
- * Return: a pointer to a 2 dimensional
+ * Return: nothing
  */
 
-void free_grid(int **grid, int height)
+void *argstostr(int ac, char **av)
 {
-	int i, j;
-	int **array;
+	int i, j, x = 0, counter = 0;
+	char *srt;
 
-	if (columns <= 0)
-		return (NULL);
-
-	if (rows <= 0)
-		return (NULL);
-
-	array = malloc(rows * sizeof(int *));
-
-	if (array == NULL)
-		return (NULL);
-
-	for (i = 0; i < rows; i++)
+	if (ac == 0 || av == NULL)
 	{
-		array[i] = malloc(columns * sizeof(int));
-		if (array[i] == NULL)
-		{
-			for (; i >= 0 ; i--)
-			{
-				free(array[i]);
-			}
-			free(array);
-			return (NULL);
-		}
+		return (NULL);
 	}
 
-	for (i = 0; i <  rows; i++)
-		for (j = 0; j < columns; j++)
-			array[i][j] = 0;
-	return (array);
+	for (i = 1; i < ac; i++)
+	{
+		for (j = 0; (av[i])[j] != '\0'; j++)
+		{
+			counter++;
+		}
+		counter++;
+	}
+
+	srt = malloc(sizeof(char) * counter);
+
+	if (srt == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 1; i < ac; i++)
+	{
+		for (j = 0; (av[i])[j] != '\0'; j++)
+		{
+			srt[x] = (av[i])[j];
+			x++;
+		}
+		srt[x] = '\n';
+		x++;
+	}
+	srt[x] = '\0';
+	return (srt);
 
 }
