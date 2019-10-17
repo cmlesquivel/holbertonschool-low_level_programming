@@ -52,7 +52,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 
-	for (i = 0; i <= size_s1 + 1; i++)
+	for (i = 0; i < size_s1; i++)
 	{
 		str[i] = s1[i];
 	}
