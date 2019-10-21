@@ -1,5 +1,5 @@
-#ifndef ABSOLUTE_H
-#define ABSOLUTE_H
+#ifndef FUNCTION_LIKE_MACRO
+#define FUNCTION_LIKE_MACRO
 
 #define ABS(x) ((x >= 0) ? (x) : (-x))
 #endif
