@@ -48,11 +48,7 @@ void printf_float(va_list float_arg)
 void printf_string(va_list string_arg)
 {
 	char *array_arg = va_arg(string_arg, char*);
-
-	if (array_arg != NULL)
-	{
-		printf("%s", array_arg);
-	}
+	printf("%s", array_arg);
 }
 
 /**
