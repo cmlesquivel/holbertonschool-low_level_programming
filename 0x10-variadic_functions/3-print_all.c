@@ -53,10 +53,6 @@ void printf_string(va_list string_arg)
 	{
 		printf("%s", array_arg);
 	}
-	else
-	{
-		printf("(nil)");
-	}
 }
 
 /**
