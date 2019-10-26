@@ -49,7 +49,7 @@ void printf_string(va_list string_arg)
 {
 	char *array_arg = va_arg(string_arg, char*);
 
-	printf("%s", array_arg);
+	printf("%s", ((array_arg != NULL) ? array_arg : "(nil)"));
 }
 
 /**
