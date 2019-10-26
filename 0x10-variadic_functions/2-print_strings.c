@@ -2,7 +2,7 @@
 #include <stdarg.h>
 
 /**
- * print_nstrings - printf all string the arguments
+ * print_strings - printf all string the arguments
  * @separator: is the string to be printed between numbers
  * @n: numbers of string to printf
  *
