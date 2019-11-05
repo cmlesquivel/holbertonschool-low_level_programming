@@ -10,16 +10,16 @@
  */
 
 void print_number(int number)
-    {
-        if (number>10)
-        {
-        print_number(number/10);
-        }
-        _putchar(number%10 + '0');
-    }
+{
+	if (number > 10)
+	{
+		print_number(number / 10);
+	}
+	_putchar(number % 10 + '0');
+}
 
 /**
- * print_listing - function that prints all the elements of a listint_t list.
+ * print_listint - function that prints all the elements of a listint_t list.
  * @h: element type listing_t
  * Return: the number of nodes
  *
@@ -35,7 +35,7 @@ size_t print_listint(const listint_t *h)
 	print_number(h->n);
 	_putchar('\n');
 
-		h=h->next;
+		h = h->next;
 		n++;
 	}
 
