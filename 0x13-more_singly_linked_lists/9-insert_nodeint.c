@@ -59,7 +59,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n)
 {
 	listint_t *aux = NULL, *new = NULL;
 	unsigned int i = 1;
-	size_t length_list = listint_len(*head) - 1;
+	size_t length_list = listint_len(*head);
 
 	if (index > length_list || *head == NULL)
 	{
