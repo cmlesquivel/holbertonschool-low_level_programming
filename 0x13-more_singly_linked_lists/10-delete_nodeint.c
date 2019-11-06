@@ -68,7 +68,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	if (index == 0)
 	{
 		delete_pop(head);
-		head = NULL;
 	}
 
 	else if (index == length_list)
