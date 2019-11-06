@@ -57,6 +57,12 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	length_list = listint_len(*head) - 1;
 
+	if (index > length_list)
+	{
+		return (-1);
+
+	}
+
 	aux = *head;
 
 	while (i < index)
