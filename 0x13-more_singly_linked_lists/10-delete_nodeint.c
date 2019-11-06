@@ -53,12 +53,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *aux = NULL, *aux2 = NULL;
 	unsigned int i = 1;
-	size_t length_list = listint_len(*head) - 1;
+	size_t length_list = 0;
 
-	if (index > length_list)
-	{
-		return (-1);
-	}
+	length_list = listint_len(*head) - 1;
 
 	aux = *head;
 
@@ -68,14 +65,16 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		i++;
 	}
 
-	if (index == length_list)
+	if (index == 0)
+	{
+		delete_pop(head);
+		head = NULL;
+	}
+
+	else if (index == length_list)
 	{
 		free(aux->next);
 		aux->next = NULL;
-	}
-	else if (index == 0)
-	{
-		delete_pop(head);
 	}
 	else
 	{
