@@ -42,7 +42,7 @@ unsigned int binary_to_uint(const char *b)
 		if (b[i] == '0' || b[i] == '1')
 		{
 			n = n * multiple;
-			my_number = my_number + (b[i] - '0') * n;
+			my_number = my_number + ((b[i] - '0') * n);
 			multiple = 2;
 		}
 		else
