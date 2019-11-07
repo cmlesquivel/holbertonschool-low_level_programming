@@ -30,7 +30,6 @@ unsigned int binary_to_uint(const char *b)
 	int length = _strlen_recursion(b), i;
 	unsigned int my_number = 0;
 	unsigned int multiple = 1;
-	unsigned int n = 1;
 
 	if (b == NULL)
 	{
@@ -41,9 +40,8 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] == '0' || b[i] == '1')
 		{
-			n = n * multiple;
-			my_number = my_number + ((b[i] - '0') * n);
-			multiple = 2;
+			my_number = my_number + ((b[i] - '0') * multiple);
+			multiple = multiple * 2;
 		}
 		else
 		{
