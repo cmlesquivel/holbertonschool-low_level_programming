@@ -15,6 +15,7 @@ int _strlen_recursion(const char *s)
 	}
 
 	return (0);
+
 }
 
 /**
@@ -31,7 +32,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int my_number = 0;
 	unsigned int multiple = 1;
 
-	if (b == NULL)
+	if (b == '\0')
 	{
 		return (0);
 	}
