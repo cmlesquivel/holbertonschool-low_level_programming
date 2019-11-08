@@ -28,14 +28,16 @@ int _strlen_recursion(const char *s)
 
 unsigned int binary_to_uint(const char *b)
 {
-	int length = _strlen_recursion(b), i;
+	int length, i;
 	unsigned int my_number = 0;
 	unsigned int multiple = 1;
 
-	if (b == '\0')
+	if (b == NULL)
 	{
 		return (0);
 	}
+
+	length = _strlen_recursion(b);
 
 	for (i = (length - 1); i >= 0; i--)
 	{
