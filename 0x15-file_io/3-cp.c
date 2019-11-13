@@ -27,8 +27,7 @@ dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 exit(98);
 }
 
-fd_to = open(file_to, O_CREAT | O_WRONLY | O_TRUNC,
-S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+fd_to = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 00664);
 
 if (fd_to == -1)
 {
