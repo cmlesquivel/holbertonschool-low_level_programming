@@ -31,5 +31,5 @@ new_node->prev = NULL;
 
 *head = new_node;
 
-return (*head);
+return (new_node);
 }
