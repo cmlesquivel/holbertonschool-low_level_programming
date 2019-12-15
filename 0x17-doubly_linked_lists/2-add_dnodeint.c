@@ -1,38 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
+
 /**
-*add_dnodeint - add a new node
-*@head: head of the current list
-*@n: value new node list
-*Return: address new element.
+* add_dnodeint - adds a new node at the beginning of a dlistint_t list.
+* @head: variable type dlistint_t
+* @number: int to add to new node
+* Return: new node at the begining at the list
 */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+
+dlistint_t *add_dnodeint(dlistint_t **head, const int number)
 {
-dlistint_t *newnode;
+dlistint_t *new_node;
 
-if (head == NULL)
+new_node = malloc(sizeof(dlistint_t));
+
+if (new_node == NULL)
+{
 return (NULL);
+}
 
-newnode = malloc(sizeof(dlistint_t));
-
-if (newnode == NULL)
-return (NULL);
-
-newnode->n = n;
+new_node->n = number;
+new_node->next = NULL;
+new_node->prev = NULL;
 
 if (*head == NULL)
 {
-newnode->next = NULL;
-newnode->prev = NULL;
+*head = new_node;
 }
-
 else
 {
-newnode->next = *head;
-newnode->prev = NULL;
-(*head)->prev = newnode;
+new_node->next = *head;
+(*head)->prev = new_node;
+*head = new_node;
 }
-*head = newnode;
-return (newnode);
-}		
+return (*head);
+}
