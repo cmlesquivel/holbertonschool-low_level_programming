@@ -20,9 +20,11 @@ if (new_node == NULL)
 {
 return (NULL);
 }
+
 new_node->n = number;
 new_node->next = NULL;
 new_node->prev = NULL;
+
 if (*head == NULL)
 {
 *head = new_node;
