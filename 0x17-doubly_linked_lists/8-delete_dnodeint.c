@@ -39,16 +39,19 @@ dlistint_t *aux;
 unsigned int i;
 size_t size_list = 0;
 
-if (h == NULL)
+if (h == NULL || *h == NULL)
 return (-1);
-
 size_list = get_lenght_list(*h);
 aux = *h;
-
+if (idx == 0  && size_list == 1)
+{
+free(*h);
+*h = NULL;
+return (1);
+}
 if (size_list < idx)
 return (-1);
 aux = *h;
-
 if (idx == 0)
 {
 free(*h);
@@ -56,19 +59,16 @@ free(*h);
 (aux->next)->prev = NULL;
 return (1);
 }
-
 if (idx == size_list)
 {
 while (aux->next != NULL)
 {
 aux = aux->next;
 }
-
 (aux->prev)->next = NULL;
 free(aux);
 return (1);
 }
-
 for (i = 0; i < idx; i++)
 aux = aux->next;
 (aux->prev)->next = aux->next;
