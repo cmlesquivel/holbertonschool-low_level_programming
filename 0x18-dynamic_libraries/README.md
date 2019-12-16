@@ -1,0 +1,1 @@
+development project Dynamic libraries
