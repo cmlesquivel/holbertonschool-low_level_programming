@@ -141,10 +141,8 @@ if (idx == 0)
 return (add_node_init(h, n));
 
 if (idx == size_list)
-{
-add_node_end(h, n);
-return (*h);
-}
+return (add_node_end(h, n));
+
 new_node = malloc(sizeof(dlistint_t));
 if (new_node == NULL)
 return (NULL);
@@ -152,8 +150,10 @@ return (NULL);
 new_node->n = n;
 new_node->next = NULL;
 new_node->prev = NULL;
+
 if (*h == NULL)
 *h = new_node;
+
 else
 {
 for (i = 0; i < idx; i++)
