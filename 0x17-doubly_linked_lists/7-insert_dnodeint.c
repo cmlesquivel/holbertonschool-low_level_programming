@@ -1,6 +1,44 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "lists.h"
+
+
+
+/**
+* add_dnodeint - adds a new node at the beginning of a dlistint_t list.
+* @head: variable type dlistint_t
+* @number: int to add to new node
+* Return: new node at the begining at the list
+*/
+
+dlistint_t *add_dnodeint(dlistint_t **head, const int number)
+{
+dlistint_t *new_node;
+
+new_node = malloc(sizeof(dlistint_t));
+
+if (new_node == NULL)
+{
+return (NULL);
+}
+
+new_node->n = number;
+new_node->next = NULL;
+new_node->prev = NULL;
+
+if (*head == NULL)
+{
+*head = new_node;
+}
+else
+{
+new_node->next = *head;
+(*head)->prev = new_node;
+*head = new_node;
+}
+return (*head);
+}
 
 
 
@@ -40,36 +78,36 @@ dlistint_t *aux, *new_node;
 unsigned int i;
 size_t size_list = 0;
 
-
 if (h == NULL)
-	return (NULL);
-
+return (NULL);
 
 size_list = get_lenght_list(*h);
 aux = *h;
 
 if (size_list < idx)
-	return (NULL);
-
+return (NULL);
+if (idx == 0)
+{
+add_dnodeint(h, n);
+return (*h);
+}
+if (idx == size_list)
+{
+add_dnodeint_end(h, n);
+return (*h);
+}
 new_node = malloc(sizeof(dlistint_t));
-
 if (new_node == NULL)
-	return (NULL);
-
+return (NULL);
 new_node->n = n;
 new_node->next = NULL;
 new_node->prev = NULL;
-
 if (*h == NULL)
-{
 *h = new_node;
-}
 else
 {
 for (i = 0; i < idx; i++)
-{
-	aux = aux->next;
-}
+aux = aux->next;
 (aux->prev)->next = new_node;
 new_node->prev = aux->prev;
 new_node->next = aux;
