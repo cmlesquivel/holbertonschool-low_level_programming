@@ -6,13 +6,13 @@
 
 
 /**
-* add_dnodeint - adds a new node at the beginning of a dlistint_t list.
+* add_node_init - adds a new node at the beginning of a dlistint_t list.
 * @head: variable type dlistint_t
 * @number: int to add to new node
 * Return: new node at the begining at the list
 */
 
-dlistint_t *add_dnodeint(dlistint_t **head, const int number)
+dlistint_t *add_node_init(dlistint_t **head, const int number)
 {
 dlistint_t *new_node;
 
@@ -88,7 +88,7 @@ if (size_list < idx)
 return (NULL);
 if (idx == 0)
 {
-add_dnodeint(h, n);
+add_node_init(h, n);
 return (*h);
 }
 if (idx == size_list)
