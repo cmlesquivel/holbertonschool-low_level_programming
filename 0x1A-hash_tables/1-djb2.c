@@ -3,7 +3,7 @@
 /**
  * hash_djb2 - function implementing the djb2 algorithm
  * @str: key
- * Return: index the hash table
+ * Return: the hash
  */
 
 
