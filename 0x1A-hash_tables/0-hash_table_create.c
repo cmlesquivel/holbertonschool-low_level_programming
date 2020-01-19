@@ -8,31 +8,36 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-if (size)
-{
-hash_table_t *new_list = NULL;
-hash_node_t *cells = NULL;
+	if (size)
+	{
+		hash_table_t *new_list = NULL;
+		hash_node_t **cells = NULL;
+		unsigned long int i;
 
-new_list = malloc(sizeof(hash_table_t));
+		new_list = malloc(sizeof(hash_table_t));
 
-if (new_list == NULL)
-{
-return (NULL);
-}
+		if (new_list == NULL)
+		{
+			return (NULL);
+		}
 
-cells = malloc(size * sizeof(hash_node_t));
+		cells = malloc(size * sizeof(hash_node_t *));
 
-if (cells == NULL)
-{
-free(new_list);
-return (NULL);
-}
+		if (cells == NULL)
+		{
+			free(new_list);
+			return (NULL);
+		}
 
-new_list->size = size;
-new_list->array = &cells;
+		new_list->size = size;
+		new_list->array = cells;
 
-return (new_list);
+		for (i = 0; i < size; i++)
+		{
+			new_list->array[i] = NULL;
+		}
 
-}
-return (NULL);
+		return (new_list);
+	}
+	return (NULL);
 }
