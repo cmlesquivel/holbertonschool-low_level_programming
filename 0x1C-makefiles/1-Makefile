@@ -1,8 +1,11 @@
 # makefile for executable holberton
 
-all: holberton
-CC = gcc
-SRC = *.c
+all: holberton clean
+CC := gcc
+SRC := main.c holberton.c
 
 holberton : main.o holberton.o
-	gcc main.c holberton.c -o holberton
+	$(CC) $(SRC) -o holberton
+
+clean:
+	@rm holberton
