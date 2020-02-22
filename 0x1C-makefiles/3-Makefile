@@ -1,0 +1,22 @@
+# makefile for executable holberton
+
+OBJ = $(SRC:%.c=%.o)
+CC = gcc
+SRC = holberton.c main.c 
+NAME= holberton
+RM = rm
+
+all:$(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+oclean:
+	-$(RM) -f $(OBJ)
+
+clean:
+	-$(RM) -f *~ $(NAME)
+
+fclean: clean oclean
+
+re: oclean all
+
+
