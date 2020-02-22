@@ -1,14 +1,14 @@
 # makefile for executable holberton
 
-OBJ = $(SRC:%.c=%.o)
 CC = gcc
-SRC = main.c holberton.c 
-NAME= holberton
+SRC = main.c holberton.c
+OBJ = $(SRC:%.c=%.o) 
+NAME = holberton
 RM = rm -f
+
 
 all:$(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
 
 clean:
 	$(RM) *~ $(NAME)
@@ -21,5 +21,3 @@ fclean:
 	$(RM) $(OBJ)
 
 re:	oclean all
-
-
