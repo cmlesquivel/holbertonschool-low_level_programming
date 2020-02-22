@@ -2,22 +2,24 @@
 
 OBJ = $(SRC:%.c=%.o)
 CC = gcc
-SRC = holberton.c main.c 
+SRC = main.c holberton.c 
 NAME= holberton
-RM = rm
+RM = rm -f
 
-all:$(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+all:	$(OBJ)
+		$(CC) $(OBJ) -o $(NAME)
 
-.PHONY: clean oclean fclean re
+
 clean:
-	-$(RM) -f *~ $(NAME)
+		$(RM) *~ $(NAME)
 
 oclean:
-	-$(RM) -f $(OBJ)
-	
-fclean: clean oclean
+		$(RM) $(OBJ)
 
-re: oclean all
+fclean:
+		$(RM) *~ $(NAME)
+		$(RM) $(OBJ)
+
+re: 	oclean all
 
 
