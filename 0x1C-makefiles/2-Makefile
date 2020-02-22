@@ -1,0 +1,11 @@
+# makefile for executable holberton
+
+OBJ = $(SRC:%.c=%.o)
+CC = gcc
+SRC = holberton.c main.c 
+NAME= holberton
+
+all:$(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+
