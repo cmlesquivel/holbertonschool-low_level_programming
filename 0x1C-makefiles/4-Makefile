@@ -1,24 +1,23 @@
-# makefile for executable holberton
+# This is a MakeFile
 
 CC = gcc
-SRC = holberton.c main.c 
-OBJ = $(SRC:.c=.o)
+SRC = main.c holberton.c
+OBJ = $(SRC:%.c=%.o)
 NAME = holberton
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-
-all : $(OBJ)
+all:	$(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-clean :
+clean:
 	$(RM) *~ $(NAME)
 
-oclean :
-	$(RM) -f $(OBJ)
+oclean:
+	$(RM) $(OBJ)
 
-fclean :
+fclean:
 	$(RM) *~ $(NAME)
 	$(RM) $(OBJ)
 
-re : oclean all
+re:	oclean all
