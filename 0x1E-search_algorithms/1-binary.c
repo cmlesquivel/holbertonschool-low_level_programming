@@ -36,8 +36,6 @@ void print_array(int *array, size_t size)
 
 int binary_search(int *array, size_t size, int value)
 {
-	int init = 0;
-	int end = (size - 1);
 	int middle = (size - 1) / 2;
 	int aux;
 
@@ -64,6 +62,5 @@ int binary_search(int *array, size_t size, int value)
 			return (binary_search(array, middle, value));
 		}
 	}
-	else
-		return (-1);
+	return (-1);
 }
